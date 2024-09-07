@@ -20,8 +20,10 @@ Snort использует правила, написанные простым ,
 - [x] Узнайте свой IP-адрес командой ifconfig
 - [x] Установите Snort:
 
-    sudo apt update
-    sudo apt-get install -y snort
+```bash
+sudo apt update
+sudo apt-get install -y snort
+```
 
 При установке нужно будет указать защищаемую сеть. Введите ..*.0/24 (Где ..* — первые три числа вашего IP-адреса)
 
@@ -59,11 +61,13 @@ sudo snort -A console -i eth0 -c snort.conf
 
 Теперь нам понадобится ещё одна виртуальная машина, на ней должен быть установлен Nmap.
 
-- [x] Со второй ВМ используйте ping, посмотрите, как реагирует Snort.
-- [x] Используйте различные методы сканирования Nmap: -sS, -sT, -sN, -sU, -sX, -sF — и посмотрите, как реагирует Snort.
+- [x] Со второй ВМ используйте `ping`, посмотрите, как реагирует Snort.
+- [x] Используйте различные методы сканирования Nmap: `-sS`, `-sT`, `-sN`, `-sU`, `-sX`, `-sF` — и посмотрите, как реагирует Snort.
 - [x] В файл test.rules добавьте правило обнаружения сканирования Nmap -sN (NULL Scan):
 
-    alert tcp any any -> any any (msg:"NULL Scan"; flags: 0; sid:322222;)
+```
+alert tcp any any -> any any (msg:"NULL Scan"; flags: 0; sid:322222;)
+```
 
 - [x] Запустите Snort:
 
