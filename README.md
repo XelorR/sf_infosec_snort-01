@@ -2,6 +2,8 @@
 
 Homework for SF/MIFI infosec courses
 
+[task description](./the_task.md)
+
 ## Yandex entered
 
 ![](./01_yandex.png)
