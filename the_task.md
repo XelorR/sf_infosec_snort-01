@@ -44,7 +44,9 @@ sudo vi test.rules
 - [x] Теперь нужно изменить содержимое конфигурационного файла Snort: `sudo vi snort.conf`
 - [x] Найдите строчки с правилами: они начинаются с include $RULE_PATH, это в части Step 7. Добавьте файл с нашими правилами:
 
-    include $RULE_PATH/test.rules
+```
+include $RULE_PATH/test.rules
+```
 
 - [x] В файле `snort.conf` также укажите домашнюю сеть. В Step 1 измените строчку `ipvar HOME_NET any` на `ipvar HOME_NET 192.168.15.0/24`
 - [x] Запустите Snort:
